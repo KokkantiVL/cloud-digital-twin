@@ -1,0 +1,104 @@
+[0m21:15:54.451079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1109d4fb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111797290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119e9490>]}
+
+
+============================== 21:15:54.452653 | fdf23ec5-6b3b-47a0-b759-713b6e8df3e1 ==============================
+[0m21:15:54.452653 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:15:54.452938 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init digital_twin', 'target_path': 'None', 'log_path': 'logs', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'debug': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'log_cache_events': 'False', 'profiles_dir': '/Users/lohithkv/.dbt', 'indirect_selection': 'eager', 'partial_parse': 'True', 'static_parser': 'True', 'warn_error': 'None', 'printer_width': '80', 'log_format': 'default', 'version_check': 'True', 'use_experimental_parser': 'False', 'introspect': 'True', 'empty': 'None', 'fail_fast': 'False', 'quiet': 'False'}
+[0m21:15:54.459598 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse logging event dictionary. Failed to parse dir field: expected string or bytes-like object, got 'PosixPath'.. Dictionary: {'dir': PosixPath('/Users/lohithkv/.dbt')}
+[0m21:15:54.459756 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m21:15:54.460403 [debug] [MainThread]: Starter project path: /opt/anaconda3/lib/python3.12/site-packages/dbt/include/starter_project
+[0m21:15:54.463243 [info ] [MainThread]: 
+Your new dbt project "digital_twin" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:15:54.463414 [info ] [MainThread]: Setting up your profile.
+[0m21:18:12.548764 [error] [MainThread]: Encountered an error:
+
+[0m21:18:12.558888 [error] [MainThread]: Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/cli/main.py", line 477, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/task/init.py", line 262, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/task/init.py", line 179, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/task/init.py", line 163, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/dbt/task/init.py", line 129, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m21:18:12.590445 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 138.16003, "process_in_blocks": "0", "process_kernel_time": 0.148502, "process_mem_max_rss": "97288192", "process_out_blocks": "0", "process_user_time": 0.540343}
+[0m21:18:12.591874 [debug] [MainThread]: Command `dbt init` failed at 21:18:12.591660 after 138.17 seconds
+[0m21:18:12.593519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119e9820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119e9220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1119eb500>]}
+[0m21:18:12.594775 [debug] [MainThread]: Flushing usage events
+[0m21:18:13.112924 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:31.394830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1065fb4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089218e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089215b0>]}
+
+
+============================== 21:18:31.396240 | e2e30a64-398b-4200-b82c-9a812f5a4ed9 ==============================
+[0m21:18:31.396240 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:18:31.396508 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'profiles_dir': '/Users/lohithkv/.dbt', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'debug': 'False', 'invocation_command': 'dbt init digital_twin', 'quiet': 'False', 'write_json': 'True', 'printer_width': '80', 'introspect': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'target_path': 'None', 'partial_parse': 'True', 'static_parser': 'True', 'no_print': 'None', 'use_colors': 'True', 'version_check': 'True', 'log_format': 'default', 'empty': 'None'}
+[0m21:18:31.402886 [info ] [MainThread]: A project called digital_twin already exists here.
+[0m21:18:31.404040 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.03785571, "process_in_blocks": "0", "process_kernel_time": 0.104118, "process_mem_max_rss": "98025472", "process_out_blocks": "0", "process_user_time": 0.500061}
+[0m21:18:31.404301 [debug] [MainThread]: Command `dbt init` succeeded at 21:18:31.404260 after 0.04 seconds
+[0m21:18:31.404450 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1082a4140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087c73b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088b3890>]}
+[0m21:18:31.404588 [debug] [MainThread]: Flushing usage events
+[0m21:18:31.574608 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:18:52.902479 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106dd7140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090fd8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090fd430>]}
+
+
+============================== 21:18:52.904045 | 3dd373e2-3b93-4f6b-a911-eae6cf697943 ==============================
+[0m21:18:52.904045 [info ] [MainThread]: Running with dbt=1.9.4
+[0m21:18:52.904329 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'cache_selected_only': 'False', 'introspect': 'True', 'empty': 'None', 'profiles_dir': '/Users/lohithkv/.dbt', 'use_experimental_parser': 'False', 'use_colors': 'True', 'target_path': 'None', 'debug': 'False', 'version_check': 'True', 'partial_parse': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'invocation_command': 'dbt init digital_twin', 'log_cache_events': 'False', 'log_path': 'logs', 'no_print': 'None', 'write_json': 'True'}
+[0m21:18:52.911219 [debug] [MainThread]: Starter project path: /opt/anaconda3/lib/python3.12/site-packages/dbt/include/starter_project
+[0m21:18:52.914319 [info ] [MainThread]: 
+Your new dbt project "digital_twin" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m21:18:52.914504 [info ] [MainThread]: Setting up your profile.
+[0m21:20:13.107042 [info ] [MainThread]: Profile digital_twin written to /Users/lohithkv/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m21:20:13.115348 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 80.23856, "process_in_blocks": "0", "process_kernel_time": 0.13854, "process_mem_max_rss": "98959360", "process_out_blocks": "0", "process_user_time": 0.546726}
+[0m21:20:13.116595 [debug] [MainThread]: Command `dbt init` succeeded at 21:20:13.116320 after 80.24 seconds
+[0m21:20:13.117408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091f78c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108aab8f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108eab320>]}
+[0m21:20:13.117867 [debug] [MainThread]: Flushing usage events
+[0m21:20:13.460963 [debug] [MainThread]: An error was encountered while trying to flush usage events
