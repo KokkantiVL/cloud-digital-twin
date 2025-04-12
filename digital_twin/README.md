@@ -115,7 +115,7 @@ Visit http://localhost:8501 in your browser. Play around with:
 	•	Daily Shipment Quantity
 Watch your table and forecast chart update in real time.
 
-⸻
+
 
 Cool Things to Try
 	1.	Up Shipment Quantities: Tweak your daily shipment to avoid stockouts.
@@ -123,29 +123,27 @@ Cool Things to Try
 	3.	Add More Days: Extend the Prophet forecast to 14 days or 30 days.
 	4.	Deploy: Host the dashboard on a cheap or free service (like Streamlit Cloud or Railway).
 
-⸻
 
 Troubleshooting
+
 	•	CSV Not Found: Make sure you use absolute paths or open psql from the same folder.
 	•	Negative Inventory: That’s actually a feature. It means shipments aren’t keeping up with demand.
 	•	Prophet Complaints: On some systems, you might need to install extra dependencies like pystan.
 	•	pandas + DBAPI Warnings: Harmless. They’re just suggestions for using SQLAlchemy.
 
-⸻
 
 Future Possibilities
+
 	•	Real-Time Streaming: If you want live data, integrate Kafka or a similar tool.
 	•	SKU-Level Detail: Expand from store-level to individual products.
 	•	Cloud: If you ever want to scale up or show it publicly, consider GCP or AWS free tiers.
 
-⸻
 
 Author
 
 Kokkanti Venkata Lohith
-	•	Master’s in Data Science & Applications, University at Buffalo
+Master’s in Data Science & Applications, University at Buffalo
 
-⸻
 
 Thank you for checking out this local-first Digital Twin demo! It’s a great way to learn data engineering, transformations, forecasting, and simulation without racking up any cloud bills. If you have questions or feedback, feel free to reach out or file an issue. Happy tinkering!
 
