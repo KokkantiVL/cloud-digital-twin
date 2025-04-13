@@ -12,20 +12,6 @@ Hey there! This project shows how to build a **Digital Twin** for a retail store
 
 ## Project Overview
 
-cloud-digital-twin/
-├── digital_twin/                    # The main dbt project folder
-│   ├── models/
-│   │   ├── staging/
-│   │   │   ├── stg_store_operations.sql
-│   │   │   └── stg_supply_chain.sql
-│   │   └── analytics/
-│   │       └── daily_store_summary.sql
-│   ├── forecast.py                  # Prophet-based time-series forecast
-│   ├── digital_twin_sim.py          # Daily inventory simulation
-│   ├── dashboard.py                 # Streamlit for visual dashboards
-├── store_operations.csv             # Synthetic sample data
-├── supply_chain.csv                 # Synthetic sample data
-└── README.md
 
 1. **store_operations.csv**: Tracks sales, foot traffic, inventory.  
 2. **supply_chain.csv**: Tracks incoming shipments and lead times.  
