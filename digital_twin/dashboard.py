@@ -9,7 +9,7 @@ st.title("📦 Digital Twin Dashboard for Retail Analytics")
 conn = psycopg2.connect(
     dbname="digital_twin_db",
     user="postgres",
-    password="Lohi#70133",
+    password="Lohi123",
     host="localhost",
     port="5432"
 )
